@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바 스크립트 함수</title>
+<script>
+	function sum() {
+		var tot=0;
+		for(i=0; i<=100, i++) {
+			tot=tot+i;
+		}
+		alert("100까지의 합 = " + tot);
+	}
+
+</script>
+</head>
+<body>
+	<button>1~100까지의 합계</button>
+	<input type="button" value="1~100까지의 합계">
+</body>
+</html>

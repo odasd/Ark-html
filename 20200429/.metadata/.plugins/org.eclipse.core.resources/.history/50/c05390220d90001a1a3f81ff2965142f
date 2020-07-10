@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>교수입력</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+</head>
+<body>
+	<H1>[교수입력]</H1>
+	<div>
+		교수번호 : <input type="text" id="txtpcode"><br>
+		교수이름 : <input type="text" id="txtpname"><br>
+		<input type="button" id="btnsave" value="저장">
+	</div>
+	
+	<h1>교수목록</h1>
+	<table id=tbl border=1 width=500></table>
+	<script id="temp" type="text/x-handlebars-template">
+		<tr>
+			<td class=code>교수번호</td>
+			<td class=name>교수명</td>
+		</tr>
+		{{#each .}}
+		<tr>
+			<td class=code>{{code}}</td>
+			<td class=name>{{name}}</td>
+		</tr>
+		{{/each}}
+	</script>
+</body>
+<script>
+	$("#btnsave").on("click", function(){
+		if(!confirm("저장하시겠습니까?")) return;
+		var pcode=$("#txtpcode").val();
+		var pname=$("#txtpname").val();
+		if(pcode.length==0 || pcode.length !=3) { 
+			alert("교수번호를 다시 입력하세요!");
+			$("#txtpcode").focus();
+		} else if(pname.length == 0) {
+			alert("교수명을 입력하세요!");
+		} else {
+			//저장
+			$.ajax({
+				type:"post",
+				url:"pinsert.jsp",
+				data:{"pcode":pcode, "pname":pname},
+				dataType:"json",
+				success:function(data){
+					alert("저장되었습니다!");
+					$("#txtpcode").val("");
+					$("#txtpname").val("");
+					$("#txtpcode").focus();
+					var temp=Handlebars.compile($("#temp").html());
+					$("#tbl").html(temp(data));	
+				}
+			});
+		}
+	});
+</script>
+</html>

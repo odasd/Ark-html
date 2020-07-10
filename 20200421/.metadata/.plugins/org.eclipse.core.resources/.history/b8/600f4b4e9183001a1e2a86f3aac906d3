@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>도서검색</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script> <!-- jQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script> <!-- handlebars -->
+	<style>
+		#container {width:680px; overflow:hidden; background:gray;}
+		.box {width:150px; margin:5px; padding:5px; background:pink; float:left;}
+		.box:hover {box-shadow:10px 10px 10px purple;}
+		.title, .authors {width:150px;text-overflow:ellipsis; white-space:nowrap; overflow:hidden; font-size:15px;}
+		.price {width:100px;text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+	</style>
+</head>
+<body>
+	<h1>[도서검색]</h1>
+	<div id="container">
+		<div class="box">
+			<img src="http://placehold.it/150x150">
+			<div class="title">자바프로그래밍</div>
+			<div class="authors">이상민,빡빡이,뚠뚠이</div>
+			<div class="price">30000</div>
+		</div>
+		<div class="box">
+			<img src="http://placehold.it/150x150">
+			<div class="title">자바프로그래밍</div>
+			<div class="authors">이상민</div>
+			<div class="price">30000</div>
+		</div>
+		<div class="box">
+			<img src="http://placehold.it/150x150">
+			<div class="title">자바프로그래밍</div>
+			<div class="authors">이상민</div>
+			<div class="price">30000</div>
+		</div>
+		<div class="box">
+			<img src="http://placehold.it/150x150">
+			<div class="title">자바프로그래밍</div>
+			<div class="authors">이상민</div>
+			<div class="price">30000</div>
+		</div>
+	</div>
+</body>
+</html>

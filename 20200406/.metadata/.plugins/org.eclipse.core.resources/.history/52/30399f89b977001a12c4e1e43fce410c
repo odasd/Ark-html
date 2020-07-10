@@ -1,0 +1,12 @@
+@charset "UTF-8"
+
+	/*스타일 시트*/
+	
+	h1 {color:green; background:pink; text-align:center;}
+
+	h2 {color:skyblue; background:white; text-align:right;"}
+	
+	body {background:gray;}
+	
+	h3 {color:pink; backgroun:black;"}
+	

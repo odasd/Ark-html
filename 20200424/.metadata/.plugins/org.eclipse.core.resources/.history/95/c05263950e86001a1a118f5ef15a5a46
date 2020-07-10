@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+<%@ page import="project01.* ,java.util.* , java.sql.*" %>
+
+<%
+	String sname=request.getParameter("sname");
+    String sp=request.getParameter("sp");
+	
+    SearchDAO dao=new SearchDAO();
+    
+    dao.insert(sname, sp);
+
+%>

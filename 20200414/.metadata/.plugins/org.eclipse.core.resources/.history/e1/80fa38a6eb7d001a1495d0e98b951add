@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바 스크립트 함수</title>
+<script>
+	function sum() {
+		var tot=0;
+		for(i=0; i<=100; i++) {
+			tot=tot+i;
+		}
+		alert("100까지의 합 = " + tot);
+	}
+	function funcolor(color) {
+		alert(color);
+		var h = document.getElementById("header");
+		h.style.color=color;
+		h.style.background="gray";
+	}
+</script>
+</head>
+<body>
+	<button onClick="sum();">1~100까지의 합계</button>
+	<input type="button" value="1~100까지의 합계" onClick="sum();">
+	<button onClick="location.href='http://www.naver.com'">네이버로 이동</button>
+	<hr>
+	<h1 id="header">안녕하세요ㅋ.ㅋ</h1>
+	<button onClick="funcolor('pink');">빨강</button>
+	<button onClick="funcolor('yellow');">노랑</button>
+	<button onClick="funcolor('skyblue');">파랑</button>
+</body>
+</html>

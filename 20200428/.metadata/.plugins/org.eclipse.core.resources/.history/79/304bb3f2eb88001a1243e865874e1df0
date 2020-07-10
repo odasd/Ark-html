@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="ex01.*, java.util.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>학생목록</title>
+</head>
+<body>
+	<h1>[학생목록]</h1>
+	<table width=700 border=1>
+		<tr>
+			<td>학번</td>
+			<td>학생명</td>
+			<td>학생학과</td>
+			<td>학년</td>
+			<td>생년월일</td>
+			<td>교수명</td>
+			<td>교수학과</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,21 @@
+
+4월 09, 2020 09:04:08.12 NEW SESSION
+4월 09, 2020 09:04:08.12 [19720:21588:0409/090408.122:ERROR:CONSOLE(0)] "Unchecked runtime.lastError: The message port closed before a response was received.", source: https://ogs.google.com/u/0/widget/app?origin=chrome-search%3A%2F%2Flocal-ntp&pid=1&spid=243&hl=ko&gm=&usegapi=1#id=I0_1586390647562&_gfid=I0_1586390647562&parent=chrome-search%3A%2F%2Flocal-ntp&pfname=&rpctoken=54158508&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.gapi.en.jw7XZHvcak8.O%2Fd%3D1%2Fct%3Dzgms%2Frs%3DAHpOoo-L1iz4xVj0PCdm2On38RCj6aYemA%2Fm%3D__features__ (0)
+4월 09, 2020 09:16:49.90 [19720:21588:0409/091649.901:ERROR:CONSOLE(0)] "Unchecked runtime.lastError: The message port closed before a response was received.", source: https://ogs.google.com/u/0/widget/app?origin=chrome-search%3A%2F%2Flocal-ntp&pid=1&spid=243&hl=ko&gm=&usegapi=1#id=I0_1586391409179&_gfid=I0_1586391409179&parent=chrome-search%3A%2F%2Flocal-ntp&pfname=&rpctoken=16541742&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.gapi.en.jw7XZHvcak8.O%2Fd%3D1%2Fct%3Dzgms%2Frs%3DAHpOoo-L1iz4xVj0PCdm2On38RCj6aYemA%2Fm%3D__features__ (0)
+4월 09, 2020 09:48:40.41 [19720:21588:0409/094840.418:ERROR:CONSOLE(0)] "Unchecked runtime.lastError: The message port closed before a response was received.", source: https://ogs.google.com/u/0/widget/app?origin=chrome-search%3A%2F%2Flocal-ntp&pid=1&spid=243&hl=ko&gm=&usegapi=1#id=I0_1586393319613&_gfid=I0_1586393319613&parent=chrome-search%3A%2F%2Flocal-ntp&pfname=&rpctoken=35886860&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.gapi.en.jw7XZHvcak8.O%2Fd%3D1%2Fct%3Dzgms%2Frs%3DAHpOoo-L1iz4xVj0PCdm2On38RCj6aYemA%2Fm%3D__features__ (0)
+4월 09, 2020 10:14:39.98 [19720:21588:0409/101439.980:ERROR:CONSOLE(48)] "Uncaught (in promise) URIError: URI malformed", source: devtools://devtools/bundled/persistence/Automapping.js (48)
+4월 09, 2020 10:14:39.99 [19720:21588:0409/101439.998:ERROR:CONSOLE(48)] "Uncaught (in promise) URIError: URI malformed", source: devtools://devtools/bundled/persistence/Automapping.js (48)
+4월 09, 2020 10:14:43.12 [19720:21588:0409/101443.120:ERROR:CONSOLE(0)] "URIError: URI malformed", source:  (0)
+4월 09, 2020 10:54:04.25 [19720:16160:0409/105404.257:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 09, 2020 10:54:28.07 [19720:16160:0409/105428.075:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 09, 2020 10:55:13.13 [19720:16160:0409/105513.135:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 09, 2020 10:56:56.86 [19720:16160:0409/105656.865:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 09, 2020 10:58:36.42 [19720:21588:0409/105836.428:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 09, 2020 10:58:59.49 [19720:21588:0409/105859.491:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 09, 2020 10:59:52.03 [19720:21588:0409/105952.039:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 09, 2020 11:00:30.15 [19720:16160:0409/110030.153:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 09, 2020 11:01:15.58 [19720:21588:0409/110115.584:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 09, 2020 11:05:03.77 [19720:21588:0409/110503.773:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 09, 2020 11:05:54.73 [19720:16160:0409/110554.733:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 09, 2020 11:10:54.14 [19720:21588:0409/111054.143:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 09, 2020 11:13:06.74 [19720:16160:0409/111306.749:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106

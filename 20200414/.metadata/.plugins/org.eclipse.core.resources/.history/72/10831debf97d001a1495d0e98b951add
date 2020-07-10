@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<style>
+		#box {width:500px; height:300px; border:1px solid black; margin-top:10px;}
+	</style>
+</head>
+<body>
+	<input type="text" size=60>
+	<button>입력</button>
+	<div id="box"></div>
+</body>
+</html>

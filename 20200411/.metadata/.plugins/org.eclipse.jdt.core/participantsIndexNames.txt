@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+C:\data\html\20200410\20200411\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2849886923.index
+\chuchu\src

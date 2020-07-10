@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>말콤의 은밀한 이중생활</title>
+	<style>
+		* {font-family:"배달의민족 주아"}
+		#page {background:#6a6a6a; width:1000px; padding-top:10px; margin:auto;}
+		table {background:red;}
+	</style>
+</head>
+<body>
+	<div id="page">
+		<h1>말콤파워!의 목록</h1>
+		<br>
+		<hr>
+		<br>
+		<a href="#">뻐튼</a>
+		<div id="content">
+			<table>
+				<tr>
+					<th>넘바</th>
+					<th>제목</th>
+					<th>내용</th>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

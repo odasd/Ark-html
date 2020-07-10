@@ -1,0 +1,29 @@
+
+4월 12, 2020 18:45:28.81 NEW SESSION
+4월 12, 2020 18:45:28.81 [21488:21836:0412/184528.813:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 18:45:57.28 [21488:21836:0412/184557.287:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 18:46:46.82 [21488:21836:0412/184646.826:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 18:48:33.69 [21488:21836:0412/184833.694:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 18:48:59.33 [21488:15248:0412/184859.335:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 12, 2020 18:49:25.59 [21488:15248:0412/184925.590:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 12, 2020 18:50:22.66 [21488:15248:0412/185022.661:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 12, 2020 18:51:58.71 [21488:15248:0412/185158.714:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+4월 12, 2020 18:52:09.98 [21488:21836:0412/185209.980:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 18:57:06.65 [21488:21836:0412/185706.654:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 18:58:46.30 [21488:21836:0412/185846.303:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+
+4월 12, 2020 19:21:18.92 NEW SESSION
+4월 12, 2020 19:21:18.92 [24772:12772:0412/192118.915:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 19:21:40.07 [24772:12772:0412/192140.073:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 19:22:22.10 [24772:12772:0412/192222.105:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 19:24:21.43 [24772:12772:0412/192421.433:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 19:33:23.92 [24772:12772:0412/193323.925:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 19:33:49.10 [24772:12772:0412/193349.100:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 19:34:39.30 [24772:12772:0412/193439.304:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 19:38:38.79 [24772:12772:0412/193838.797:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 19:39:00.71 [24772:12772:0412/193900.715:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 19:39:57.40 [24772:12772:0412/193957.404:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 19:41:31.37 [24772:12772:0412/194131.374:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 19:45:42.24 [24772:12772:0412/194542.244:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 19:46:04.49 [24772:12772:0412/194604.494:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+4월 12, 2020 19:46:51.37 [24772:12772:0412/194651.377:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106

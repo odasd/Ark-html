@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>으으어어어</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+</head>
+<body>
+	<h1>[상품등록2]</h1>
+	상품번호 : <input type="text" id="pno">
+	<hr>
+	상품명 : <input type="text" id="pname">
+	<hr>
+	가격 : <input type="text" id="price>">
+	<hr>
+	<input type="button" value="저장" id="btnsave">
+	<hr>
+	<input type="button" value="선택삭제" id="delall">
+	<table id="tbl" border=1; width=500;>
+		<tr>
+			<td width=50><input type="checkbox" id="chkall"></td>
+			<td width=80>상품번호</td>
+			<td width=250>상품명</td>
+			<td width=80>상품가격</td>
+			<td width=50>삭제</td>
+		</tr>
+		<tr class="row">
+			<td><input type="checkbox" class="chk"></td>
+			<td class="pno">100</td>
+			<td class="pname">세탁기</td>
+			<td class="price">100</td>
+			<td><button>삭제</button></td>
+		</tr>
+	</table>
+</body>
+<script>
+	//저장
+	$("#btnsave").on("click" , function(){
+		if(confirm("확실합니까?")==false) return;
+		var pno=$("#pno").val("");
+		var pname=$("#pname").val("");
+		var price=$("price").val("");
+		
+		var data=("<tr>");
+		data +=("<td>" + pno + "</td>");
+		data +=("<td>" + pname + "</td>");
+		data +=("<td>" + price + "</td>");
+		data +=("</tr>");
+		$("#tbl").append(str);
+	});
+</script>
+</html>

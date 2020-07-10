@@ -1,0 +1,38 @@
+package ex01;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+public class BlogDAO {
+	
+	 public Connection con() throws Exception {
+		   String driver = "oracle.jdbc.driver.OracleDriver";
+		   String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+		   String user = "system";
+		   String password = "159752s";
+
+		   Class.forName(driver);
+		   Connection con = DriverManager.getConnection(url, user, password);
+		   return con;
+		   }
+	 
+	 public ArrayList<BlogVO> list()throws Exception{
+	      ArrayList<BlogVO> list=new ArrayList<BlogVO>();
+	      String sql="select * from tbl_blog";
+	      PreparedStatement ps=con().prepareStatement(sql);
+	      ResultSet rs=ps.executeQuery();
+	      while(rs.next()) {
+	         BlogVO vo=new BlogVO();
+	         vo.setBno(rs.getInt("bno"));
+	         vo.setTitle(rs.getString("title"));
+	         vo.setWdate(rs.getDate("wdate"));
+	         vo.setArticle(rs.getString("article"));
+	         list.add(vo);
+	      }
+	      return list;
+	   }
+	 
+}

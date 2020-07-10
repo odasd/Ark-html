@@ -1,0 +1,42 @@
+package ex01;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+public class GradeDAO {
+
+    public Connection con() throws Exception {
+        String driver = "oracle.jdbc.driver.OracleDriver";
+        String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+        String user = "system";
+        String password = "159752s";
+
+        Class.forName(driver);
+        Connection con = DriverManager.getConnection(url, user, password);
+        return con;
+        }
+	
+    public ArrayList<GradeVO> list() throws Exception {
+    	ArrayList<GradeVO> list=new ArrayList<GradeVO>();
+    	String sql="select*from tbl_grade";
+    	PreparedStatement ps=con().prepareStatement(sql);
+    	ResultSet rs=ps.executeQuery();
+    	
+    	while(rs.next()) {
+    		GradeVO vo=new GradeVO();
+    		
+    		vo.setGno(rs.getInt("gno"));
+    		vo.setGname(rs.getString("gname"));
+    		vo.setKor(rs.getInt("kor"));
+    		vo.setEng(rs.getInt("eng"));
+    		vo.setMat(rs.getInt("mat"));
+    		vo.executeQuery();
+    	}
+    	
+    	return list;
+    }
+    
+}

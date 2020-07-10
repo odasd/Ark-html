@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="ex01.*, java.util.*, org.json.simple.*, java.text.*" %>
+
+<%
+	String lcode=request.getParameter("lcode");
+	CDAO dao=new CDAO();
+	ArrayList<SVO2> list=dao.list(lcode);
+	
+	JSONObject jObject=new JSONObject();
+	jObject.put("total", dao.count(lcode));
+	
+	JSONArray array=new JSONArray();
+	for(SVO2 vo:list) {
+		JSONObject obj=new JSONObject();
+		obj.put("scode", vo.getScode());
+		obj.put("sname", vo.getSname());
+		obj.put("sdept", vo.getSdept());
+		obj.put("year", vo.getYear());
+		
+		array.add(obj);
+	}
+	jObject.put("items2", array);
+	out.println(jObject);
+%>

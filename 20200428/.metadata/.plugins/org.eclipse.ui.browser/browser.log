@@ -1,0 +1,43 @@
+
+4월 28, 2020 09:54:55.62 NEW SESSION
+4월 28, 2020 09:54:55.62 [8408:9348:0428/095455.623:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 09:54:57.97 [8408:5192:0428/095457.969:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+4월 28, 2020 09:59:09.41 [3468:5624:0428/095909.412:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 10:03:39.13 [6024:8812:0428/100339.137:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 10:05:50.63 [20308:11472:0428/100550.630:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 10:07:36.11 [19208:20420:0428/100736.117:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+4월 28, 2020 10:08:15.41 NEW SESSION
+4월 28, 2020 10:08:15.41 [20436:6924:0428/100815.410:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 10:09:23.66 [20680:20672:0428/100923.661:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 10:20:10.24 [20128:20572:0428/102010.242:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 10:36:32.22 [20128:20572:0428/103632.221:ERROR:CONSOLE(0)] "Unchecked runtime.lastError: The message port closed before a response was received.", source: https://ogs.google.com/u/0/widget/app?origin=chrome-search%3A%2F%2Flocal-ntp&pid=1&spid=243&hl=ko&gm= (0)
+4월 28, 2020 10:42:14.33 [10732:19544:0428/104214.338:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 10:42:32.47 [20500:1560:0428/104232.473:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 10:42:59.77 [19448:16140:0428/104259.770:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 10:43:11.54 [19448:16140:0428/104311.543:ERROR:CONSOLE(0)] "Unchecked runtime.lastError: The message port closed before a response was received.", source: https://ogs.google.com/u/0/widget/app?origin=chrome-search%3A%2F%2Flocal-ntp&pid=1&spid=243&hl=ko&gm= (0)
+4월 28, 2020 10:54:11.48 [19448:16140:0428/105411.483:ERROR:CONSOLE(0)] "Unchecked runtime.lastError: The message port closed before a response was received.", source: https://ogs.google.com/u/0/widget/app?origin=chrome-search%3A%2F%2Flocal-ntp&pid=1&spid=243&hl=ko&gm= (0)
+4월 28, 2020 10:56:51.54 [8416:20852:0428/105651.541:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 10:57:25.73 [8416:20852:0428/105725.736:ERROR:CONSOLE(0)] "Unchecked runtime.lastError: The message port closed before a response was received.", source: https://ogs.google.com/u/0/widget/app?origin=chrome-search%3A%2F%2Flocal-ntp&pid=1&spid=243&hl=ko&gm= (0)
+4월 28, 2020 11:20:27.39 [10200:9844:0428/112027.395:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 11:20:34.37 [19108:15968:0428/112034.373:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 13:15:31.50 [17984:19120:0428/131531.503:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 14:05:24.64 [14544:16444:0428/140524.644:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 14:05:54.58 [21720:20768:0428/140554.584:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 14:06:07.88 [21720:20500:0428/140607.878:ERROR:get_updates_processor.cc(258)] PostClientToServerMessage() failed during GetUpdates with error 2
+4월 28, 2020 14:06:10.50 [19908:20016:0428/140610.501:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 14:07:34.18 [18976:17444:0428/140734.182:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 14:07:59.98 [18976:17444:0428/140759.982:ERROR:CONSOLE(0)] "Unchecked runtime.lastError: The message port closed before a response was received.", source: https://ogs.google.com/u/0/widget/app?origin=chrome-search%3A%2F%2Flocal-ntp&pid=1&spid=243&hl=ko&gm= (0)
+
+4월 28, 2020 14:50:59.32 NEW SESSION
+4월 28, 2020 14:50:59.32 [23328:23332:0428/145059.319:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 14:51:34.59 [19004:6596:0428/145134.596:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 14:51:51.91 [22636:10848:0428/145151.914:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 14:56:12.42 [22196:22812:0428/145612.425:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 14:56:32.88 [21888:6304:0428/145632.884:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 14:59:00.61 [1776:23000:0428/145900.614:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 14:59:15.30 [18308:19736:0428/145915.302:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 15:00:31.42 [18788:21116:0428/150031.426:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 15:08:46.95 [23112:19584:0428/150846.957:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 15:08:53.54 [18844:8328:0428/150853.540:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 28, 2020 15:13:13.76 [19964:21440:0428/151313.769:ERROR:browser_switcher_service.cc(238)] XXX Init()

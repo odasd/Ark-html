@@ -1,0 +1,45 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="ex20200506.*, java.util.* , java.text.*"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>점수 총계</title>
+	<style>
+		#page {margin:auto; float:center; text-align:center;}
+		#tbl {margin:auto; float:center; text-align:center;}
+		th {background:gray; color:pink;}
+		.row:hover{background:skyblue; color:white;}
+	</style>
+</head>
+<body>
+	<div id=page width=1000>
+	<h1>[강좌별 평균점수]</h1>
+	<table border=1 width=700 id=tbl>
+		<tr>
+			<th>강좌번호</th>
+			<th>강좌명</th>
+			<th>교수명</th>
+			<th>강의실</th>
+			<th>평균점수</th>
+			<th>수강인원</th>
+		</tr>
+		<%
+			EDAO edao=new EDAO();
+			ArrayList<CVO> list=edao.clist();
+			for(CVO vo:list) {
+				out.println("<tr class=row>");
+				out.println("<td>" + vo.getLcode() + "</td>");
+				out.println("<td>" + vo.getLname() + "</td>");
+				out.println("<td>" + vo.getPname() + "</td>");
+				out.println("<td>" + vo.getRoom() + "</td>");
+				DecimalFormat df=new DecimalFormat("##0.00");
+				out.println("<td>" + vo.getAvg() + "</td>");
+				out.println("<td>" + vo.getCount() + "</td>");
+				out.println("</tr>");
+			}
+		%>
+	</table>
+	</div>
+</body>
+</html>

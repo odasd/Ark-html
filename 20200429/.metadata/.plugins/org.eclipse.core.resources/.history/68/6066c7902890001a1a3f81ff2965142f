@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>그것이 알고싶다</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+</head>
+<body>
+	<H1>[학과검색]</H1>
+	<select id="dept">
+		<option>전산</option>
+		<option>건축</option>
+		<option>전자</option>
+	</select>
+	<input type="button" value="검색" id="btnSearch">
+</body>
+</html>

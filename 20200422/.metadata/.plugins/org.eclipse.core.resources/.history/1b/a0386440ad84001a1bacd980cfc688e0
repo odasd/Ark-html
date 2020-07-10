@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>[영화검색]</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+	<style>
+		.title{width:300px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+   .actor{width:200px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+   #tbl{width:760px; background:#A9FFFF;padding:5px; margin:auto;
+            overflow:hidden;border-collapse:collapse; 
+            box-shadow:10px 10px 10px 10px gray;border-radius:10px 10px 10px; margin:auto;}
+   h1{width:200px; margin:auto;}
+   #search{width:760px; margin:auto;}
+    .header{width:760px; margin:auto; font-size:25px; text-align:center;
+          
+          background:#6799FF; color:white;}
+   tr td{border:2px solid #D4F4FA; margin:auto;}
+   tr:hover{background:#DF4D4D; color:white;}
+   #search{margin:auto;float:center; margin:auto; float:center; text-align:center; background:gray;}
+   #header{background:black; color:gray; margin:auto;}
+   #tbl1{width:760px; background:#A9FFFF;padding:5px; margin:auto;
+            overflow:hidden;border-collapse:collapse; 
+            box-shadow:10px 10px 10px 10px gray;border-radius:10px 10px 10px; margin:auto;}
+	</style>
+</head>
+<body>
+	<h1>[영화 검색]</h1>
+	<div id="search">
+		검색수 <span id="total"></span>
+		<input type="text" id=txtSearch value="터미네이터">
+		<input type="button" id="btnSearch" value="저장">
+		<input type="button" id="btnSave" value="선택저장">
+	</div>
+	<table id="tbl"></table>
+	<script id="temp" type="text/x-handlebars-template">
+			<tr id=header>
+				<td><input type="checkbox" id=chkAll></td>
+				<th>제목</th>
+				<th>주연배우</th>
+				<th>저장</th>
+			</tr>
+		{{#each items}}
+			
+			<tr class=row>
+				<td><input type="checkbox" class=chk></td>
+				<td><div class=title>{{{title}}}</div></td>
+				<td><div class=actor>{{actor}}</div></td>
+				<td><button>저장</button></td>
+			</tr>
+
+		{{/each}}
+	</script>
+	<hr>
+	<h1>[저장 결과]</h1>
+	<table id="tbl1"></table>
+	<script id="temp1" type="text/x-handlebars-template">
+			<tr id=header>
+				<td><input type="checkbox" id=chkDel></td>
+				<th>제목</th>
+				<th>주연배우</th>
+				<th>저장</th>
+			</tr>
+		{{#each .}}
+			
+			<tr class=row>
+				<td><input type="checkbox" class=chk></td>
+				<td><div class=title>{{{title}}}</div></td>
+				<td><div class=actor>{{actor}}</div></td>
+				<td><button>삭제</button></td>
+			</tr>
+		{{/each}}
+	</script>
+</body>
+<script>
+	var display=10;
+	var start=1;
+	getlist();
+	getmovie();
+	
+	function getmovie(){
+		$.ajax({
+			type:"get",
+			url:"list.jsp",
+			dataType:"json",
+			success:function(data){
+				var temp = Handlebars.compile($("#temp1").html());
+	            $("#tbl1").html(temp(data));   
+			}
+		});
+	}
+	
+	
+	
+	$("#tbl").on("click", ".row button", function(){
+		if(confirm("저장하시겠습니까?")==false) return;
+		var row=$(this).parent().parent();
+		var title=row.find(".title").text();
+		var actor=row.find(".actor").text();
+		$.ajax({
+			type:"post",
+			url:"insert.jsp",
+			data:{"title":title, "actor":actor},
+			success:function(){
+				alert("저장되었습니다~!!!");
+				getmovie();
+			},
+			error:function(){
+				alert("저장되지 않았습니다.");
+			}
+		});
+	});
+	$("#btnSearch").on("click", function(){
+		getlist();
+	});
+	
+	$("#txtSearch").keydown(function(key){
+		if(key.keyCode==13){
+		getlist();
+	}
+	});
+	
+	function getlist(){
+		
+		var query=$("#txtSearch").val();
+		
+		$.ajax({
+			type:"get",
+			url:"movie.jsp",
+			data:{"query": query, "display" : display, "start": start},
+			dataType:"json",
+			success:function(data){
+			var temp = Handlebars.compile($("#temp").html());
+            $("#tbl").html(temp(data));   
+			}
+		});
+	}
+	
+	$("#header").on("click", "#chkAll" , function(){
+		var chkall=$(this).parent();
+			$(".chk").val(true);
+		
+	});
+		
+		
+	
+	
+</script>
+</html>

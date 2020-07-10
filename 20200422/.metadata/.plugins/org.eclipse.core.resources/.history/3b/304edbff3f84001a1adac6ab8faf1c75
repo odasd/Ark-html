@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>블로그 검샛~</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+    <style>
+    	#tbl {background:skyblue;}
+    	#btnSearch{}
+    	#title {border:1px solid black;}
+    </style>
+</head>
+<body>
+	<h1>[블로그 검색]</h1>
+	<div id="search">
+		검색수 <span id="total"></span>
+		<input type="text" id=txtSearch value="설현">
+		<input type="button" id="btnSearch" value="검색">
+		<button id="btnPre">이전</button>
+        <button id="btnNext">다음</button>
+	</div>
+	<table id="tbl"></table> <!-- 테이블 닫고 믿에서 탬플릿을 만들어주라고한다 , 규칙이래-->
+	<script id="temp" type="text/x-handlebars-template">
+		{{#each items}}
+      		<tr>
+				<td id=title>{{{title}}}</td>
+			</tr>
+ 		 {{/each}}
+	</script>
+	
+</body>
+<script>
+	var display=15;
+	var start=1;
+	getlist();
+	
+	$("#btnNext").on("click", function(){
+	      if(start<1000){
+	         start = start + 1;
+	         getList();
+	      }else{
+	         alert("마지막 페이지 입니다!")
+	         start = start;
+	      }
+	   });
+	   
+	   $("#btnPre").on("click", function(){
+	      if(start>1){
+	         start = start-display;
+	      }
+	      getList();
+	   });
+	
+	$("#btnSearch").on("click", function(){
+		getlist();
+	});
+	
+	$("#txtSearch").keydown(function(key){
+		if(key.keyCode==13) {
+			getlist();
+		}
+	});
+
+	function getlist(){
+
+	var query=$("#txtSearch").val();
+	
+	$.ajax({
+		type:"get",
+		url:"blog.jsp",
+		dataType:"json",
+		data:{"query" : query, "display":display, "start":start},
+		success:function(data){
+			var total=data.total;
+			$("#total").html(total + "건");
+			
+			var temp = Handlebars.compile($("#temp").html());
+            $("#tbl").html(temp(data));   
+		}
+	});
+}
+</script>
+</html>

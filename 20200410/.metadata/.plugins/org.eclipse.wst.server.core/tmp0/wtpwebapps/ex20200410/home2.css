@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+* {font-family:"배달의민족 주아";}
+		body {background:#293430;}
+		#page {background:#faf6de; width:1000px; margin:auto; padding:10px; box-shadow:10px 10px 10px #6bb9a2; border-radius:10px;}
+		#content {width:900px; border: 3px solid #997855; margin:20px auto; padding:20px; border-radius:10px;}
+		.tblinsert {width:700px; margin:auto; border-collapse:collapse; margin-top:30px; margin-bottom:30px; border-radius:10px;
+					text-align:center;background: #c5b7a7; width:750px; border:2px solid black; border-radius:10px; margin:auto;}
+		.tblinsert td {border:1px solid #1e1a19; padding:5px; border-radius:10px;}
+		.tblinsert .title {background:#ffa58d; color:white; text-align:center;}
+		.tblinsert .data:nth-child(2n) {background:#c1edc7;}
+		.tblinsert .data:hover {background:#ec5b50; color:#d6d3a5;}
+		
+		a {text-decoration:none; color:#3c3c37; font-size:20px; border:2px solid black; border-radius:5px; padding:5px; background:#a0834b;}
+		a:hover {color:#e15f38;}
+		.tblinsert tr {margin:auto;}
+		input {height:30px;}
+		.button {width:100px; height:40px; font-size:20px; border-radius:10px; border:1px solid black; box-shadow: 2px 2px 2px black; }

@@ -1,0 +1,11 @@
+package ex20200426;
+
+public class ShopVO2 {
+	private String sid;
+	private String title;
+	private int lprice;
+	private int hprice;
+	private String img;
+	
+	
+}

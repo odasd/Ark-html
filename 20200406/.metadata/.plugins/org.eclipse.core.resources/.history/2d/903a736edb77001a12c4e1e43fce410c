@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>연습05</title>
+	
+</head>
+<body>
+	<h1>이미지 연습</h1>
+		<table border=1 width=500>
+			<tr>
+				<td><a href="http://daum.net"><img src="daum.png" width=100/></a></td>
+				<td>다음페이지로 이동합니다.</td>
+			</tr>
+			<tr>
+				<td><a href="http://naver.com"><img src="naver.png" width=200/></a></td>
+				<td>다음페이지로 이동합니다.</td>
+			</tr>
+		</table>
+		<br> <!-- 한칸 띄우기 -->
+		<img src="http://placehold.it/100x100"/> <!-- 설정한 이미지 크기를 출력해서 보여줌 -->
+		<div style="background:black;color:white;">블럭 영역 설정</div> <!-- 공간을 라인단위로 설정 -->
+		
+		<span style="background:yellow;">인라인</span>	<!-- 공간을 블럭단위로 설정? -->
+		<span style="background:yellow;">인라인</span>
+		<span style="background:yellow;">인라인</span>
+		
+		 <header>        <h1>HTML5 기본</h1>    </header>    <nav>        <ul>            <li><a href="#">메뉴 - 1</a></li>            <li><a href="#">메뉴 - 2</a></li>            <li><a href="#">메뉴 - 3</a></li>        </ul>    </nav>    <section>        <article>            <h1>일반 웹페이지</h1>            <p>일반적으로 웹 페이지의 레이아웃은 다음과 같이 div 태그를 사용해 구성합니다.</p>        </article>        <article>            <h1>시맨틱 웹 페이지</h1>            <p>시맨틱 태그를 사용해 페이지를 구성하면 각 태그에 의미를 부여할 수 있기 때문에 코드 가독성이 좋습니다.</p>        </article>    </section>    <footer>        <address>서울특별시 강서구 내발산동</address>    </footer> 
+</body>
+</html>

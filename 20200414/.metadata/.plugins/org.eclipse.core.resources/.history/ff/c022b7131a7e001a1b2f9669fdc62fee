@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>마법같은 주소관리</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+	<h1>[주소관리]</h1>
+	이름 : <input type="text" id="txtName" value="홍길동">
+	<hr>
+	주소 : <input type="text" id="txtAddress" value="인천">
+	<hr>
+	<input type="button" value="저장" id="btnSave">
+	<br><br>
+	
+	<input type="button" value="선택삭제" id="btnDel">
+	<table id="tbl" border=1 width=500>
+		<tr>
+			<td width=50><input type="checkbox"></td>
+			<td width=100>이름</td>
+			<td width=300>주소</td>
+			<td width=50>삭제</td>
+		</tr>
+	</table>
+</body>
+<script>
+	//저장버튼 눌렀을때 
+	$("#btnSave").click(function(){
+		if(confirm("저장하시겠습니까?")==false) return; //저장하지 않을거면 빠져나가라
+		var name=$("#txtName").val();
+		var address=$("#txtAddress").val();
+		var str="<tr>";
+		str +="<td><input type='checkbox'></td>";
+		});
+</script>
+</html>

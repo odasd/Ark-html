@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<header>
+		<h1>홍길동 쇼핑몰</h1>
+		<br>
+		<hr/>
+	</header>
+	
+	<nav>
+		<table>
+			<tr>
+				<td>침대</td>
+				<td>쇼파</td>
+				<td>책상</td>
+				<td>식탁</td>
+			</tr>
+		</table>
+	</nav>
+	
+	<section>
+		
+	</section>
+	
+	<footer>
+		<hr/>
+	</footer>
+	
+</body>
+</html>

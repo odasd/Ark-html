@@ -1,0 +1,10 @@
+@charset "UTF-8"
+
+
+	h2 {color:blue; background:white; text-align:right;}
+	
+	body {background:gray;}
+	
+	h3 {color:pink; backgroun:black;}
+	
+	h1 {color:green; background:pink; text-align:center;}

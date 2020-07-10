@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="ex01.* , java.util.* , java.sql.* " %>
+
+<%
+	String gname=request.getParameter("gname");
+	String strkor=request.getParameter("kor");
+	int kor=Integer.parseInt(strkor);
+	String streng=request.getParameter("eng");
+	int eng=Integer.parseInt(streng);
+	String strmat=request.getParameter("mat");
+	int mat=Integer.parseInt(strmat);
+	
+	GradeDAO dao=new GradeDAO();
+	GradeVo vo=new GradeVo();
+	dao.insert(vo);
+	
+	
+
+%>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>주소수정</title>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+	<h1>[주소 수정]</h1>
+	<form>
+		이름 : <input type="text" name="textname" value="홍길동">
+		<hr>
+		주소 : <input type="text" name="textaddress">
+		<hr>
+		<input type="submit" value="수정">
+		<input type="reset" value="취소">
+		<button>목록</button>
+		<input type="button" value="삭제">
+	</form>
+</body>
+</html>

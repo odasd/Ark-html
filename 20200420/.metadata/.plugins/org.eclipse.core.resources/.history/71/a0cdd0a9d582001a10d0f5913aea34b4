@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>도서 검색</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<style>
+		#tbl {width:700px; border-collapse:collapse;}
+		td {border:1px solid black; }
+		.row:hover {background:gray; color:white;}
+		.title {width:400px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;} /*여기서 뭐하면 말줄임표...이 출력됨 아마 끝에 3개중 뭐겠지뭐 쮸댕ㅋㅋ*/
+		.authors {width:200px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+		.price {width:100px;}
+	</style>
+</head>
+<body>
+	<h1>[도서 검색]</h1>
+	<div id="search">
+		검색수 <span id="total"></span>
+		<input type="text" value="안드로이드" id="txtSearch">
+		<input type="button" value="검색" id="btnSearch">
+	</div>
+	<table id="tbl"></table>
+	<div id="pagination">
+		<button id="btnPre">이전</button>
+		<button id="btnNext">다음</button>
+		현재페이지:<span id="page"></span>
+	</div>
+</body>
+<script>
+var page=1;
+var is_end;
+
+getlist();
+
+$("#btnSearch").on("click", function(){ //검색 버튼을 눌러야 출력
+	getlist();
+});
+$("#txtSearch").keydown(function(key){ //키를 입력할때마다 출력
+	if(key.keyCode==13){ //엔터키를 눌렀을때 출력 , 13은 엔터의 아스키 코드값
+		getlist();
+	}
+});
+
+$("#btnNext").on("click", function(){
+    if(is_end==false){
+       page=page+1;
+       getlist();
+    }
+ });
+ 
+ $("#btnPre").on("click", function(){
+    if(page!=1){ //if(page>1)
+       page=page-1;
+       getlist();
+    }
+ });
+
+function getlist(){	
+	var query=$("#txtSearch").val();
+	$("#page").html(page);
+	
+	
+	
+	$.ajax({
+		type:"get",
+		headers: {"Authorization": "KakaoAK 2d06e7f6c04a5b6cff4d94cebfef1694"},
+		dataType:"json",
+		data:{"query":query, "page": page, "size": 10},
+		url:"https://dapi.kakao.com/v3/search/book?target=title",
+		success:function(res){
+			var total=res.meta.pageable_count;
+			is_end=res.meta.is_end;
+			$("#total").html("<b>" + total + "</b>" + "건");
+			var str="";
+			$(res.documents).each(function(){
+				var title=this.title;
+				var authors=this.authors;
+				var price=this.price;
+				str +="<tr class=row>";
+				str +="<td><div class=title>" + title + "</div></td>";
+				str +="<td><div class=authors>" + authors + "</div></td>";
+				str +="<td><div class=price>" + price + "</div></td>";
+				str +="</tr>";
+			});
+			$("#tbl").html(str);
+		}	
+			
+	});
+	$("#page").html("Page:" + page);
+}
+</script>
+</html>

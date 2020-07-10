@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<header>
+		<h1>홍길동 쇼핑몰</h1>
+		<style>
+			span {background:yellow; padding:10px; margin:10px; width:200px; height:200px;}
+		</style>
+		<br>
+		<hr/>
+	</header>
+	
+	<nav>
+		<table>
+			<tr>
+				<td>침대</td>
+				<td>쇼파</td>
+				<td>책상</td>
+				<td>식탁</td>
+			</tr>
+			
+		</table>
+		<hr/>
+	</nav>
+	
+	<section>
+			<table>
+				<td><img src="http://placehold.it/200x200"/><br>
+					상품명 : 더블침대<br>
+					가격 : 100만원
+				</td>	
+			</table>
+			
+	</section>
+	
+	<footer>
+		
+	</footer>
+	
+</body>
+</html>

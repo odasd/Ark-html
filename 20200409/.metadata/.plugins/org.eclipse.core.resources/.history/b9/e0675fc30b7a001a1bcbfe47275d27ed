@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Blog</title>
+	<link rel="stylesheet" href="home.css"/>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<h1>콩순이의 블로그입니다.</h1>
+		</div>
+		<div id="content">
+			
+		</div>
+		<div id="footer">
+			<h3>작성자 : 매력적인 콩순이</h3>
+		</div>
+	</div>
+</body>
+</html>

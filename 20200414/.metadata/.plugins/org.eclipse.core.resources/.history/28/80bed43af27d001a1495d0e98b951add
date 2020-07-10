@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery 라이브러리</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+	<button id="sum">1부터 100까지의 합</button>
+</body>
+<script>
+		$("#sum").on("Click", function(){
+			var sum=0;
+			for(i=0; i<=100; i++) {
+				sum=sum+i;
+			}
+			alert(sum);
+		});
+	</script> 
+</html>

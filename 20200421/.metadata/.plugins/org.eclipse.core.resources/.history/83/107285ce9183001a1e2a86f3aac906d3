@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>도서검색</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script> <!-- jQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script> <!-- handlebars -->
+	<style>
+		#container {width:680px; overflow:hidden; background:gray;}
+		.box {width:150px; margin:5px; padding:5px; background:pink; float:left;}
+		.box:hover {box-shadow:10px 10px 10px purple;}
+		.title, .authors {width:150px;text-overflow:ellipsis; white-space:nowrap; overflow:hidden; font-size:15px;}
+		.price {width:100px;text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+	</style>
+</head>
+<body>
+	<h1>[도서검색]</h1>
+	<div id="container"></div>
+	<script id="temp" type="text/x-handlebars-template">
+		{{each documents}}
+			<div class=box>
+				<img src={{thumbnail}} width:150>
+				<div class=title>{{title}}</div>
+				<div class=authors>{{authors}}</div>
+				<div class=price>{{price}}</div>
+			</div>
+		{{/each}}
+	</script>
+</body>
+<script>
+getlist();
+function getlist(){	
+	$.ajax({
+		type:"get",
+		url:"https://dapi.kakao.com/v3/search/book?target=title",
+		headers: {"Authorization":"KakaoAK 2d06e7f6c04a5b6cff4d94cebfef1694"}, //카카오ak 다음에는 카카오에서 부여한 REST API 키	2d06e7f6c04a5b6cff4d94cebfef1694를 붙혀넣음
+		dataType:"json",
+		data:{"query" : "자바", "page":1, "size":12},
+		success:function(data){
+			
+			var total=data.meta.pageable_count;
+			is_end=data.meta.is_end;
+			
+			var temp=Handlebars.compile($("#temp").html());
+			$("#container").html(temp(data));
+		}
+	});
+	
+	
+};
+</script>
+</html>

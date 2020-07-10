@@ -1,0 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="ex20200506.*,java.util.*,org.json.simple.*"%>
+
+<%	
+	String scode=request.getParameter("scode");
+	
+	SDAO dao=new SDAO();
+	ArrayList<SVO> list=dao.list();
+	ArrayList<CVO> elist=dao.elist(scode);
+	CVO vo=dao.avg(scode);
+%>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>상품검색</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+</head>
+<body>
+	<h1>상품검색</h1>
+	<div id="search">
+		<input type="text" value="컴퓨터" id="txtsearch">
+		<input type="button" value="검색" id="btnsearch">
+		
+	</div>
+</body>
+</html>

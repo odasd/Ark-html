@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+		body {background:gray;}
+		#page {background:white; width:1000px; margin:auto; padding:20px; box-shadow:20px 20px 20px black; border-radius:10px; border:10px solid black;}
+		h1, h3, h4 {text-align:center;}
+		h1 {background:black; color:pink;}
+		#nav span {background:gray; color:white; margin:10px; padding:5px; font-size:20px; text-align:center;}
+		#nav span:hover {background:black; color:pink;}
+		#nav {text-align:center;}
+		.group {background:pink; width:1000px; padding:10px; margin:10px auto; border:10px solid black; border-radius:10px; overflow:auto;}
+		.box {float:left; width:150px; height:150; text-align:center; margin:5px; padding:5px; background:green; border-radius:10px;}
+		.box:hover {box-shadow:20px 20px 20px black; width:170px; height:160px;}
+		.box:active {box-shadow:20px 20px 20px black; width:500px; height:480px;}
+		.tittle {background:white;}
+		
+		

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>dsa</title>
+</head>
+<body>
+	<table id="tbl">
+		<tr class="row">
+			<td sname="홍길동" address="인천"></td>
+			<td><button>출력</button></td>
+		</tr>
+		<tr class="row">
+			<td sname="심청이" address="서울"></td>
+			<td><button>출력</button></td>
+		</tr>
+	</table>
+	
+	<div>
+		<h1 id="sname"></h1>
+		<h1 id="address"></h1>
+	</div>
+</body>
+</html>

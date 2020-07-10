@@ -1,0 +1,39 @@
+package ex202005062;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+public class EDAO2 {
+	
+	public Connection con() throws Exception {
+        String driver = "oracle.jdbc.driver.OracleDriver";
+        String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+        String user = "haksa";
+        String password = "pass";
+
+        Class.forName(driver);
+        Connection con = DriverManager.getConnection(url, user, password);
+        return con;
+        }
+	
+	public ArrayList<CVO2> c2list() throws Exception {
+ 		ArrayList<CVO2> list=new ArrayList<CVO2>();
+ 		String sql="select scode, sname, sdept, pname from stupro group by scode, sname, sdept, pname";
+ 		PreparedStatement ps=con().prepareStatement(sql);
+ 		ResultSet rs=ps.executeQuery();
+ 		while(rs.next()) {
+ 			CVO2 vo=new CVO2();
+ 			vo.setScode(rs.getString("scode"));
+ 			vo.setSname(rs.getString("sname"));
+ 			vo.setSdept(rs.getString("sdept"));
+ 			vo.setPname(rs.getString("pname"));
+ 			list.add(vo);
+ 			System.out.println(vo.toString());
+ 		}
+ 		
+ 		return list;
+ 	}
+}

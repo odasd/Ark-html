@@ -1,0 +1,20 @@
+package ex20200508;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DAO {
+	public Connection con() throws Exception {
+        String driver = "oracle.jdbc.driver.OracleDriver";
+        String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+        String user = "haksa";
+        String password = "pass";
+
+        Class.forName(driver);
+        Connection con = DriverManager.getConnection(url, user, password);
+        return con;
+        }
+	
+	//학생 데이터 입력
+	
+}

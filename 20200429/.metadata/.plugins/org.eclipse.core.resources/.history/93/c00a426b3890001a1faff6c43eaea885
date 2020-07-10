@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>그것이 알고싶다</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+	<style>
+	 th {background:gray; color:pink;}
+	</style>
+</head>
+<body>
+	<H1>[학과검색]</H1>
+	<select id="dept">
+		<option>전산</option>
+		<option>건축</option>
+		<option>전자</option>
+	</select>
+	<input type="button" value="검색" id="btnSearch">
+	<div>
+		<h1>교수목록</h1>
+		 학과 : <span id="dept"></span>
+		 교수인원:<span id="pcnt"></span>
+		<table id=ptbl border=1 width=500></table>
+		<script id="ptemp" type="text/x-handlebars-template">
+		<tr>
+			<th>교수번호</th>
+			<th>교수명</th>
+			<th>교수학과</th>
+			<th>임용일</th>
+		</tr>
+		{{#each pArray}}
+		<tr class=row>
+			<td>{{pcode}}</td>
+			<td>{{pname}}</td>
+			<td>{{dept}}</td>
+			<td>{{hiredate}}</td>
+		</tr>
+		{{/each}}
+	</script>
+	</div>
+	<div>
+		<h1>학생목록</h1>
+		 학과 : <span id="dept"></span>
+		 학생인원:<span id="scnt"></span>
+		<table id=stbl border=1 width=500></table>
+		<script id="stemp" type="text/x-handlebars-template">
+		<tr>
+			<th>학생번호</th>
+			<th>학생명</th>
+			<th>학생학과</th>
+			<th>생일</th>
+		</tr>
+		{{#each sArray}}
+		<tr class=row>
+			<td class=scode>{{scode}}</td>
+			<td>{{sname}}</td>
+			<td>{{dept}}</td>
+			<td>{{birthday}}</td>
+		</tr>
+		{{/each}}
+
+		</script>
+	</div>
+	<div id="enroll">
+		<h1>수강신청목록</h1>
+		 <span id="scode"></span>
+		 수강인원:<span id="cnt"></span>
+		 과목평균:<span id="avg"></span>
+		<table id=etbl border=1 width=500></table>
+		<script id="etemp" type="text/x-handlebars-template">
+		<tr>
+			<th>강좌번호</th>
+			<th>강좌이름</th>
+			<th>점수</th>
+		</tr>
+		{{#each array}}
+		<tr class=row>
+			<td class=lcode>{{lcode}}</td>
+			<td>{{lname}}</td>
+			<td>{{grade}}</td>
+		</tr>
+		{{/each}}
+
+		</script>
+	</div>
+<script>
+
+	$("#enroll").hide;
+
+	$("#btnSearch").on("click", function(){
+		var dept=$("#dept").val();
+		$.ajax({
+			type:"get",
+			url:"list.jsp",
+			data:{"dept":dept},
+			dataType:"json",
+			success:function(data){
+				alert(dept);
+				$("#dept").html(data.dept);
+				$("#pcnt").html(data.pcnt);
+	            $("#scnt").html(data.scnt);
+	            
+				var temp=Handlebars.compile($("#ptemp").html());
+				$("#ptbl").html(temp(data));	
+				
+				var temp=Handlebars.compile($("#stemp").html());
+				$("#stbl").html(temp(data));	
+			}
+		});
+	});
+	
+	$("#stbl").on("click", ".row",function(){
+		var scode=$(this).find(".scode");
+	
+		$.ajax({
+			type:"get",
+			url:"elist.jsp",
+			data:{"scode":scode},
+			dataType:"json",
+			success:function(data){
+				$("#enroll").show();
+				$("#scode").html(scode);
+		        $("#avg").html(data.avg);
+		        $("#cnt").html(data.cnt);
+				var temp=Handlebars.compile($("#etemp").html());
+				$("#etbl").html(temp(data));	
+				
+			}
+	});
+</script>
+</html>

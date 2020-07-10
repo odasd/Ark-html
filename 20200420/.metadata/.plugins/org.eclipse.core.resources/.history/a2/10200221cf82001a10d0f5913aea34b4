@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>도서 검색</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<style>
+		#tbl {width:700px; border-collapse:collapse;}
+		td {border:1px solid black; }
+		.row:hover {background:gray; color:white;}
+	</style>
+</head>
+<body>
+	<h1>[도서 검색]</h1>
+	<div id="search">
+		검색수 <span id="total"></span>
+		<input type="text" value="안드로이드" id="txtSearch">
+		<input type="button" value="검색" id="btnSearch">
+	</div>
+	<table id="tbl">
+		
+	</table>
+</body>
+<script>
+
+getlist();
+$("#btnSearch").on("click", function(){ //검색 버튼을 눌러야 출력
+	getlist();
+});
+$("#txtSearch").keydown(function(key){ //키를 입력할때마다 출력
+	if(key.keyCode==13){ //엔터키를 눌렀을때 출력 ,13은 엔터의 아스키 코드값
+		getlist();
+	}
+});
+
+
+function getlist(){	
+	var query=$("#txtSearch").val();
+	$.ajax({
+		type:"get",
+		headers: {"Authorization": "KakaoAK 2d06e7f6c04a5b6cff4d94cebfef1694"},
+		dataType:"json",
+		data:{"query":query, "page": 1, "size": 10},
+		url:"https://dapi.kakao.com/v3/search/book?target=title",
+		success:function(res){
+			var total=res.meta.pageable_count;
+			$("#total").html("<b>" + total + "</b>" + "건");
+			var str="";
+			$(res.documents).each(function(){
+				var title=this.title;
+				var authors=this.authors;
+				var price=this.price;
+				
+				str +="<tr class=row>";
+				str +="<td>" + title + "</td>";
+				str +="<td>" + authors + "</td>";
+				str +="<td>" + price + "</td>";
+				str +="</tr>";
+			});
+			$("#tbl").html(str);
+		}	
+			
+	});
+}
+</script>
+</html>

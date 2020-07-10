@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>도서 검색</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+	<h1>[도서 검색]</h1>
+	<div id="search">
+		검색수 <span id="total"></span>
+	</div>
+	<table id="tbl">
+		
+	</table>
+</body>
+<script>
+	$.ajax({
+		type:"get",
+		headers: {"Authorization": "KakaoAK 2d06e7f6c04a5b6cff4d94cebfef1694"},
+		dataType:"json",
+		data:{"query":"자바 프로그래밍", "page": 1, "size": 10},
+		url:"https://dapi.kakao.com/v3/search/book?target=title",
+		success:function(res){
+			var total=res.meta.pageable_count;
+			$("#total").html("<b>" + total + "</b>" + "건");
+			$(res.documents).each(function(){
+				var title=this.title;
+				var authors=this.authors;
+				var price=this.price;
+				
+				str +="<tr>"
+				str +="<td>" + title + "</td>";
+				str +="</tr>";
+			});
+			$("#tbl").html(str);
+		}	
+			
+	});
+</script>
+</html>

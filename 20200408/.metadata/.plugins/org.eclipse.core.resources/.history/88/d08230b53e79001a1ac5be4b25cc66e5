@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>연습02</title>
+	<style>
+		.box {width:200px; height:150px; background:#0eb279; margin:10px;
+		border:10px solid black; /* 선의 두깨와 선의 종류와 선의 색 */
+		border-radius:100px 100px 100px 10px;} /* 시계방향순으로 수정됨 */
+		a {text-decoration:none;}
+	</style>
+</head>
+<body>
+	<div class="box"><a href="ex01.html">예제01</a></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+</body>
+</html>

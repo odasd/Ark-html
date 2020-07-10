@@ -1,0 +1,71 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="ex20200506.*, java.util.* , java.text.*"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>점수 총계</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+	<style>
+		#page {margin:auto; float:center; text-align:center;}
+		#tbl,#stbl {margin:auto; float:center; text-align:center;}
+		th {background:gray; color:pink;}
+		.row:hover{background:skyblue; color:white;}
+	</style>
+</head>
+<body>
+	<div id=page width=1000>
+	<h1>[강좌별 평균점수]</h1>
+	<table border=1 width=700 id=tbl>
+		<tr>
+			<th>학생번호</th>
+			<th>학생이름</th>
+			<th>학생학과</th>
+		</tr>
+		<%
+			SDAO dao=new SDAO();
+			ArrayList<SVO> list=dao.list();
+			for(SVO vo:list) {
+				out.println("<tr class=row>");
+				out.println("<td>" + vo.getScode() + "</td>");
+				out.println("<td>" + vo.getSname() + "</td>");
+				out.println("<td>" + vo.getSdept() + "</td>");
+				out.println("</tr>");
+			}
+		%>
+	</table>
+		<h1>수강신청 목록</h1>
+		<table id="stbl" border=1 width=700></table>
+		<script id="stemp" type="text/x-handlebars-template">
+				<tr class=title>
+					<th>강좌번호</th>
+					<th>강좌명</th>
+					<th>점수</th>
+					<th>교수명</th>
+				</tr>
+			{{#each list}}
+				<tr class=row>
+					<td class=lcode>{{lcode}}</td>
+					<td>{{lname}}</td>
+					<td>{{grade}}</td>
+					<td>{{pname}}</td>
+				</tr>
+			{{/each}}
+		</script>
+	
+	</div>
+</body>
+<script>
+$.ajax({
+	type:"get",
+	url:"sjson.jsp",
+	dataType:"json",
+	data:{"scode":scode},
+	success:function(data){
+		var temp=Handlebars.compile($("#stemp").html());
+		$("#stbl").html(temp(data));	
+	}
+});
+</script>
+</html>

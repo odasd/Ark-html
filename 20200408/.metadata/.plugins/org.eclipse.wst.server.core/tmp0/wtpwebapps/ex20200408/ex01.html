@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	* {color:red;} /* 전체 선택자 */
+	
+	/* 태그 선택자 */
+	h1 {color:blue;}
+	p {color:yellow; background:black;}
+	
+	/* id선택자 */
+	#header {width:800px; height:50px; background:#2fefac; margin-bottom:20px;}
+	#wrap {width:1000px; height:500px; background:#fb8e4d;}
+	#aside {width:200px; height:300px; background:#e2cb7c; float:left; margin:30px; padding:10px;}
+	#content {width:600px; height:300px; background:#d55454; float:right; margin:10px; padding:10px;}
+	
+	/* class 선택자 */
+	.fruit {font-size:30px; color:blue;}
+	
+	/* 후손 선택자 */
+	#wrap h1 {color:purple;}	/* 전부다 적용 */
+	
+	/* 자손 선택자 */
+	#content > h1 {color:gray;} /* 자기 밑에거에 적용 */
+	
+	/* 속성 선택자 */
+	input[type="text"] {background:red;}
+	input[type="password"] {background:blue;}
+	input[type="radio"] {background:purple;}
+	
+	/* 반응선택자 */
+	h1:hover {background:black; color:white;} /* 마우스를 올려놓았을때 색이변함 */
+	#wrap h1:active {background:white; color:black;} /* 마우스로 클릭하면 색이 변함 */
+	
+	/* 구조 선택자 */
+	li:first-child {background:white;} /* 첫번째 자식 바뀜s */
+	li:nth-child(2n) {background:black;} /* 2번하고 4번만 바뀜=짝수자리만 바뀜 */
+	li:nth-child(2n+1) {background:gray;} /* 홀수자리 바뀜 */
+	li:last-child {background:purple;} /* 마지막놈 바뀜 */
+</style>
+</head>
+<body>
+	<!-- 태그 주석 -->
+	<h1>전체 선택자 적용하기</h1>
+	<p>전체 선택자를 사용하는 모든.....</p>
+	
+	<div id="header"><h1>여기는 제목입니다</h1></div>
+	<div id="wrap">
+		<div id="aside">
+			<h1>여기는 aside..</h1>
+		</div>
+		<div id="content">
+			<h1>여기는 content...</h1>
+				<ol>
+					<li class="fruit">바나나</li>	
+					<li class="fruit">딸기</li>	
+					<li>옥수수</li>	
+					<li class="fruit">포도</li>	
+					<li>감자</li>				
+				</ol>
+				<input type="text">
+				<input type="password">
+				<input type="radio">
+				<input type="checkbox">
+				
+		</div>
+	</div>
+</body>
+</html>

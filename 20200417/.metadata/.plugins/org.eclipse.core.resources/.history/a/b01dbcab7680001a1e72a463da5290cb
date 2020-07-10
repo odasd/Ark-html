@@ -1,0 +1,39 @@
+package ex01;
+
+import java.sql.Timestamp;
+import java.util.Date;
+
+public class ReplyVO {
+	
+	private int rno;
+	private String content;
+	private Timestamp wdate;
+	private int cnt;
+	
+	public int getRno() {
+		return rno;
+	}
+	public void setRno(int rno) {
+		this.rno = rno;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public Date getTimestamp() {
+		return wdate;
+	}
+	public void setTimestamp(Timestamp wdate) {
+		this.wdate = wdate;
+	}
+	public int getCnt() {
+		return cnt;
+	}
+	public void setCnt(int cnt) {
+		this.cnt = cnt;
+	}
+	
+	
+}

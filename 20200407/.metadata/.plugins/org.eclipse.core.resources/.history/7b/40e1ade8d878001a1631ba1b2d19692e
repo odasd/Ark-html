@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>월별 매니저관련 정보</title>
+</head>
+<body>
+	<h1>데이터 입력</h1>
+	<hr>
+	<form action="insert.jsp">
+		<table border=1 width=600>
+			<tr>
+				<td width=100>월</td>
+				<td><input type="text" name="month"></td>
+			</tr>
+			<tr>
+				<td width=100>매니저</td>
+				<td><input type="text" name="manager"></td>
+			</tr>
+			<tr>
+				<td width=100>매출액</td>
+				<td><input type="text" name="mmoney"></td>
+			</tr>
+			<tr>
+				<td width=100>연락처</td>
+				<td><input type="text" name="tel"></td>
+			</tr>
+			<tr>
+				<td colspan=2>
+					<input type="reset" value="취소">
+					<input type="submit" value="저장">				
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

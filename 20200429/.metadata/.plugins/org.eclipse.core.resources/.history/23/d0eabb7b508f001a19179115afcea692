@@ -1,0 +1,79 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="ex202005062.*, java.util.* , java.text.*"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>이게뭐여 </title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+	<style>
+		#glist {display:none;}
+	</style>
+</head>
+<body>
+	<h1>[학생목록]</h1>
+	<table border=1 width=700 id=tbl>
+		<tr>
+			<th>학번</th>
+			<th>학생명</th>
+			<th>학과</th>
+			<th>지도교수명</th>
+		</tr>
+		<%
+			EDAO2 edao=new EDAO2();
+			ArrayList<CVO2> list=edao.c2list();
+			for(CVO2 vo:list) {
+				out.println("<tr class=row>");
+				out.println("<td class=scode>" + vo.getScode() + "</td>");
+				out.println("<td>" + vo.getSname() + "</td>");
+				out.println("<td>" + vo.getSdept() + "</td>");
+				out.println("<td>" + vo.getPname() + "</td>");
+				out.println("</tr>");
+			}
+		%>
+	</table>
+	
+	<h1>[수강신청 목록]</h1>
+	<table id="c2tbl" border=1 width=700></table>
+		<script id="c2temp" type="text/x-handlebars-template">
+				<tr class=title>
+					<th>강좌번호</th>
+					<th>강좌명</th>
+					<th>점수</th>
+				</tr>
+			{{#each glist}}
+				<tr class=row>
+					<td class=lcode>{{lcode}}</td>
+					<td>{{lname}}</td>
+					<td>{{grade}}</td>
+				</tr>
+			{{/each}}
+		</script>
+</body>
+<script>
+
+	var scode;
+	
+		$("#tbl").on("click", ".row", function(){
+			scode=$(this).find(".scode").html();
+			$("#glist").show();
+				alert("sa");
+			getlist();
+		});
+		
+	function getlist(){
+		$.ajax({
+			type:"get",
+			url:"e2json.jsp",
+			dataType:"json",
+			data:{"scode" : scode},
+			success:function(data){
+				var temp=Handlebars.compile($("#c2temp").html());
+				$("#c2tbl").html(temp(data));
+			}
+		});
+	}
+</script>
+</html>

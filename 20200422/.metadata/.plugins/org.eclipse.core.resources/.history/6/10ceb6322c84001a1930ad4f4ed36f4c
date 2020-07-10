@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>쭐력</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+</head>
+<body>
+	<table id="tbl">
+		<tr class="row">
+			<td>1</td>
+			<td><button sname="홍길동" address="인천">출력</button></td>
+		</tr>
+		<tr class="row">
+			<td>2</td>
+			<td><button sname="심청이" address="서울">출력</button></td>
+		</tr>
+	</table>
+	
+	<div>
+		<h1 id="sname"></h1>
+		<h1 id="address"></h1>
+	</div>
+</body>
+<script>
+	$("#tbl").on("click", ".row button" ,function(){
+		var sname=$(this).attr("sname");
+		var address=$(this).attr("address");
+		
+		$("#sname").html(sname);
+		$("#address").html(address);
+	});
+</script>
+</html>

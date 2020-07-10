@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>연습1</title>
+	<style>h1 {color:green; background:pink; text-align:center;}</style>
+	<style>h2 {color:skyblue; background:white; text+align:reft;"}</style>
+	<style>body {background:gray;}</style>
+	<script>
+	a=100;
+	b=200;
+	alert("a+b = " + (a+b));
+	</script>
+</head>
+<body>
+<!-- 주석이렇게 준다 기억하자 -->
+	<h1>h1제목입니다.....</h1>
+	<h2>h2제목입니다.....</h2>
+	<h3>h3제목입니다.....</h3>
+	<h4>h4제목입니다.....</h4>
+	<h5>h5제목입니다.....</h5>
+	<h6>h6제목입니다.....</h6>
+	<h1>"a+b = " + (a+b)</h1>
+</body>
+</html>

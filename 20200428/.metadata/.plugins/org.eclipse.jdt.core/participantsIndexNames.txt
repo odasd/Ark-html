@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\data\html\20200428\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2587959662.index
+\ex20200428\src
+C:\data\html\20200428\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4018036139.index
+\ex20200428\src

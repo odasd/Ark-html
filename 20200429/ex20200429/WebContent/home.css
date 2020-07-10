@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+	.title {text-align:center; background:gray; color:white;}
+	.row {text-align:center;}
+	.row:hover {background:skyblue; color:white; cursor:pointer;}
+	#slist, #clist {display:none;}
+	button {cursor:pointer;}
+	#students {width:680px; background:gray; color:white; padding:10px; display:none;}
+	#courses {width:680px; background:gray; color:white; padding:10px; margin-top:10px;}

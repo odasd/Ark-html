@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>콩순이의 쇼핑몰</title>
+	<style>
+		body {background:gray;}
+		#page {background:white; width:1000px; margin:auto; padding:20px; box-shadow:20px 20px 20px black;}
+		h1, h3 {text-align:center;}
+		h1 {background:black; color:pink;}
+		#nav span {background:gray; color:white; margin:10px; padding:5px; font-size:20px; text-align:center;}
+		#nav span:hover {background:black; color:pink;}
+		#nav {text-align:center;}
+		.group {background:pink; width:800px; height:300px; padding:5px; margin:5px; }
+	</style>
+</head>
+<body>
+	<div id="page">
+		<div id="top">
+			<h1>콩순이 쇼핑몰</h1>
+			<hr>
+		</div>
+		<div id="nav">
+			<span>침대</span>
+			<span>쇼파</span>
+			<span>책상</span>
+			<span>식탁</span>
+			<hr>
+		</div>
+		<div id="content">
+			<div class="group">
+					
+			</div>
+			<div class="group">
+					
+			</div>
+		</div>
+		<div id="bottom">
+			<hr>
+			<h3>주소 : 인천 미추홀구 학익동</h3>
+		</div>
+	</div>
+</body>
+</html>

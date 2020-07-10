@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>[영화검색]</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+	<style>
+		.title{width:300px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+   .actor{width:200px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+   #tbl{width:760px; background:#A9FFFF;padding:5px; margin:auto;
+            overflow:hidden;border-collapse:collapse; 
+            box-shadow:10px 10px 10px 10px gray;border-radius:10px 10px 10px;}
+   h1{width:200px; margin:auto;}
+   #search{width:760px; margin:auto;}
+    .header{width:760px; margin:auto; font-size:25px; text-align:center;
+          
+          background:#6799FF; color:white;}
+   tr td{border:2px solid #D4F4FA; }
+   tr:hover{background:#DF4D4D; color:white;}
+   #search{margin:auto;float:center;}
+   #header{background:black; color:gray;}
+	</style>
+</head>
+<body>
+	<h1>[영화 검색]</h1>
+	<div id="search">
+		검색수 <span id="total"></span>
+		<input type="text" id=txtSearch value="터미네이터">
+		<input type="button" id="btnSearch" value="저장">
+		<input type="button" id="btnSave" value="선택저장">
+	</div>
+	
+	<table id="tbl"></table>
+	<script id="temp" type="text/x-handlebars-template">
+			<tr id=header>
+				<td><input type="checkbox" id=chkAll></td>
+				<th>제목</th>
+				<th>주연배우</th>
+				<th>저장</th>
+			</tr>
+		{{#each items}}
+			
+			<tr class=row>
+				<td><input type="checkbox" class=chk></td>
+				<td><div class=title>{{{title}}}</div></td>
+				<td><div class=actor>{{{actor}}}</div></td>
+				<td><button>저장</button></td>
+			</tr>
+		{{/each}}
+	</script>
+</body>
+<script>
+	var display=10;
+	var start=1;
+	getlist();
+	
+	$("#btnSearch").on("click", function(){
+		getlist();
+	});
+	
+	$("#txtSearch").keydown(function(key){
+		if(key.keyCode==13){
+		getlist();
+	}
+	});
+	
+	function getlist(){
+		
+		var query=$("#txtSearch").val();
+		
+		$.ajax({
+			type:"get",
+			url:"movie.jsp",
+			data:{"query": query, "display" : display, "start": start},
+			dataType:"json",
+			success:function(data){
+			var temp = Handlebars.compile($("#temp").html());
+            $("#tbl").html(temp(data));   
+			}
+		});
+	}
+</script>
+</html>

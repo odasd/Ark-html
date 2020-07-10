@@ -1,0 +1,14 @@
+127.0.0.1 - - [25/Apr/2020:07:47:15 +0900] "GET / HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [25/Apr/2020:07:47:17 +0900] "GET /project01/search.jsp HTTP/1.1" 200 1387
+0:0:0:0:0:0:0:1 - - [25/Apr/2020:07:47:17 +0900] "GET /favicon.ico HTTP/1.1" 404 1014
+0:0:0:0:0:0:0:1 - - [25/Apr/2020:07:47:29 +0900] "GET /project01/insert.jsp?txtsearch=%EA%B0%90%EB%B0%94%EC%93%B0&sp=%EB%84%A4%EC%9D%B4%EB%B2%84 HTTP/1.1" 200 360
+0:0:0:0:0:0:0:1 - - [25/Apr/2020:07:47:29 +0900] "GET /project01/search.jsp HTTP/1.1" 200 1509
+127.0.0.1 - - [25/Apr/2020:11:00:20 +0900] "GET / HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [25/Apr/2020:11:00:23 +0900] "GET /project01/search.jsp HTTP/1.1" 200 1509
+0:0:0:0:0:0:0:1 - - [25/Apr/2020:11:00:23 +0900] "GET /favicon.ico HTTP/1.1" 404 1014
+0:0:0:0:0:0:0:1 - - [25/Apr/2020:11:00:27 +0900] "GET /project01/delete.jsp?sno=25 HTTP/1.1" 200 59
+0:0:0:0:0:0:0:1 - - [25/Apr/2020:11:00:27 +0900] "GET /project01/search.jsp HTTP/1.1" 200 1390
+0:0:0:0:0:0:0:1 - - [25/Apr/2020:11:00:37 +0900] "GET /project01/insert.jsp?txtsearch=%EC%B9%98%ED%82%A8 HTTP/1.1" 200 352
+0:0:0:0:0:0:0:1 - - [25/Apr/2020:11:00:37 +0900] "GET /project01/search.jsp HTTP/1.1" 200 1504
+0:0:0:0:0:0:0:1 - - [25/Apr/2020:11:00:45 +0900] "GET /project01/insert.jsp?txtsearch=%EC%B9%98%ED%82%A8&sp=%EB%84%A4%EC%9D%B4%EB%B2%84 HTTP/1.1" 200 357
+0:0:0:0:0:0:0:1 - - [25/Apr/2020:11:00:45 +0900] "GET /project01/search.jsp HTTP/1.1" 200 1623

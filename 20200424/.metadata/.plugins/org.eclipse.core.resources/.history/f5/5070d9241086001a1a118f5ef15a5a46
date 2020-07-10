@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+<%@ page import="project01.* ,java.util.* , java.sql.*" %>
+
+<%
+	String sname=request.getParameter("txtsearch");
+    String sp=request.getParameter("sp");
+	
+    SearchDAO dao=new SearchDAO();
+    
+    dao.insert(sname, sp);
+
+%>
+
+<script>
+
+	if(sp=="네이버") {
+		
+	}
+	
+	if(sp=="다음") {
+		
+	}
+	location.href="search.jsp";
+</script>

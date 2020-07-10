@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="ex02.* , java.util.*, java.sql.* ,java.util.Date" %>
+
+<% 
+	rno=request.getParameter("rno");
+
+	
+	ReplyDAO dao=new ReplyDAO();
+	ReplyVO vo=new ReplyVO();
+	vo.setRno(rno);
+	
+	
+	dao.delete(rno);
+	
+	
+	
+
+%>
+
+<script>
+	alert("삭제되었습니다.");
+	location.href="list.jsp";
+</script>

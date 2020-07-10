@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>으으어어어</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+</head>
+<body>
+	<h1>[상품등록2]</h1>
+	상품명 : <input type="text" id="pname">
+	<hr>
+	가격 : <input type="text" id="price>">
+	<hr>
+	<input type="submit" value="저장">
+	<hr>
+	<input type="button" value="선택삭제" id="delall">
+	<table id="tbl" border=1; width=500;>
+		<tr>
+			<td width=50><input type="checkbox" id="chkall"></td>
+			<td width=60>상품번호</td>
+			<td width=250>상품명</td>
+			<td width=50>상품가격</td>
+			<td width=50>삭제</td>
+		</tr>
+	</table>
+</body>
+</html>

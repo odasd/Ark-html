@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="ex20200508.*, org.json.simple.*"%>
+
+<%
+	String scode=request.getParameter("scode");
+
+	DAO dao=new DAO();
+	
+	
+	JSONObject jObject=dao.selist(scode);
+	out.println(jObject);
+	
+	
+%>

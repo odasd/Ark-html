@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>[상품등록]</title>
+</head>
+<body>
+	<h1>[상품등록]</h1>
+	<form action="insert.jsp" method="post"> <!-- post값을 주면 웹브라우져 주소창에 정보가 표기되지 않음 , get은 표기됨 생략하면 get이라함-->
+		<table border=1 width=500>
+			<tr>
+				<td width=100>상품번호 : </td>
+				<td><input type="text" name="pno"></td> <!-- name을 지정을 안하면 데이터베이스에 입력할수없음 -->
+			</tr>
+			<tr>
+				<td width=100>상품이름 : </td>
+				<td><input type="text" name="pname"></td>
+			</tr>
+			<tr>
+				<td width=100>상품가격 : </td>
+				<td><input type="text" name="price"></td>
+			</tr>
+			<tr>
+				<td colspan=2>
+					<input type="reset" value="취소">
+					<input type="submit" value="저장">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+4월 27, 2020 15:36:29.65 NEW SESSION
+4월 27, 2020 15:36:29.65 [23896:27036:0427/153629.647:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 27, 2020 15:54:43.23 [12128:24732:0427/155443.237:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 27, 2020 15:56:01.37 [7332:25368:0427/155601.374:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 27, 2020 15:59:53.82 [16968:20176:0427/155953.822:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 27, 2020 16:02:08.68 [19804:4108:0427/160208.683:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 27, 2020 16:03:26.09 [14084:27376:0427/160326.095:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 27, 2020 16:10:11.48 [26232:27076:0427/161011.489:ERROR:browser_switcher_service.cc(238)] XXX Init()
+
+4월 27, 2020 20:25:20.23 NEW SESSION
+4월 27, 2020 20:25:20.23 [17136:17140:0427/202520.232:ERROR:browser_switcher_service.cc(238)] XXX Init()
+4월 27, 2020 20:47:38.38 [17136:17140:0427/204738.384:ERROR:CONSOLE(0)] "Unchecked runtime.lastError: The message port closed before a response was received.", source: https://ogs.google.com/u/0/widget/app?origin=chrome-search%3A%2F%2Flocal-ntp&pid=1&spid=243&hl=ko&gm= (0)

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>으으어어어</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+</head>
+<body>
+	<h1>[상품등록2]</h1>
+	상품번호 : <input type="text" id="pno">
+	<hr>
+	상품명 : <input type="text" id="pname">
+	<hr>
+	가격 : <input type="text" id="price>">
+	<hr>
+	<input type="button" value="저장" id="btnsave">
+	<hr>
+	<input type="button" value="선택삭제" id="delall">
+	<table id="tbl" border=1; width=500;>
+		<tr>
+			<td width=50><input type="checkbox" id="chkall"></td>
+			<td width=80>상품번호</td>
+			<td width=250>상품명</td>
+			<td width=80>상품가격</td>
+			<td width=50>삭제</td>
+		</tr>
+		<tr class="row">
+			<td><input type="checkbox" class="chk"></td>
+			<td class="pno">100</td>
+			<td class="pname">세탁기</td>
+			<td class="price">100</td>
+			<td><button class="del">삭제</button></td>
+		</tr>
+		<tr class="row">
+			<td><input type="checkbox" class="chk"></td>
+			<td class="pno">101</td>
+			<td class="pname">냉장고</td>
+			<td class="price">120</td>
+			<td><button class="del">삭제</button></td>
+		</tr>
+	</table>
+</body>
+<script>
+	//저장
+	var pno=102;
+	$("#btnsave").on("click" , function(){
+		if(confirm("확실합니까?")==false) return;
+		pno=pno+1;
+		var pno=$("#pno").val();
+		var pname=$("#pname").val();
+		var price=$("price").val();
+		
+		var data=("<tr class='row'>";
+		data +="<td><input type='checkbox' class='chk'></td>";
+		data +="<td class='pno'>" + pno + "</td>");
+		data +="<td class='pname'>" + pname + "</td>";
+		data +="<td class='price'>" + price + "</td>";
+		data +="<td><button class='del'>삭제</button></td>";
+		data +="</tr>";
+		$("#tbl").append(data);
+	});
+	
+	$("#chkall").on("click" , function(){
+		
+	});	
+	$("#delall").on("click" , function(){
+		if(confirm("선택삭제?")==false) return;
+		
+	});
+	$("#tbl").on("click" , ".row .del", function(){
+		var row=$(this).parent().parent();
+		var pno=row.find(".pno").html();
+		if(confirm(pno + "을(를) 삭제?")==false) return;
+		$(row).remove();
+	});
+</script>
+</html>

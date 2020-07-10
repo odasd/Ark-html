@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>라이트박스 연습</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+	<style>
+		#content {width:5700px; background:gray; padding:10px; margin:auto; overflow:hidden;}
+		h1 {text-align:center;}
+		.box {width:150px; background:#ed8270; margin:10px; padding:10px; text-align:center; float:left;}
+	</style>
+</head>
+<body>
+	<h1>LightBox 연습</h1>
+	<div id="content">
+		<div class="box">
+			<img src="http://www.placehold.it/150x150">
+			<div class="pname">냉장고</div>
+			<div class="price">100만원</div>
+		</div>
+		<div class="box">
+			<img src="http://www.placehold.it/150x150">
+			<div class="pname">세탁기</div>
+			<div class="price">80만원</div>
+		</div>
+		<div class="box">
+			<img src="http://www.placehold.it/150x150">
+			<div class="pname">에어컨</div>
+			<div class="price">150만원</div>
+		</div>
+	</div>
+</body>
+</html>

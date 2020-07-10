@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연습02</title>
+</head>
+<body>
+	<div>
+		<h1>폼(form) 태그연습</h1>	
+		<form>
+			<table border=1 wodth=500>
+				<tr>
+					<td width=100>아이디</td> <!-- 글자입력 -->
+					<td><input type="text"></td>
+				</tr>
+				<tr>
+					<td width =100>비밀번호</td>	<!-- 비밀번호 입력 -->
+					<td><input type="password"></td>
+				</tr>
+				<tr>
+					<td width=100>파일선택</td>
+					<td><input type="file"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

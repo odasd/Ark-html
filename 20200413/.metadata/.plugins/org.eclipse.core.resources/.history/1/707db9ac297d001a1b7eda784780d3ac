@@ -1,0 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="ex01.* , java.util.* , java.sql.*" %>
+
+<%
+	String title=request.getParameter("title"); //괄호 안의 값은 form에서 준 값임
+	String content=request.getParameter("content");
+	
+	out.println("<h1>" + title + "</h1>");
+	out.println("<h1>" + content + "</h1>");
+
+
+
+%>

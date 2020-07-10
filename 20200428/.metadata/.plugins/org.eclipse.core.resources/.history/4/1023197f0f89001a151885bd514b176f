@@ -1,0 +1,11 @@
+package ex01;
+
+public class CVO {
+	
+	pirvate String lcode;
+	pirvate String lname;
+	pirvate int room;
+	pirvate String pname;
+	pirvate String pdept;
+	
+}

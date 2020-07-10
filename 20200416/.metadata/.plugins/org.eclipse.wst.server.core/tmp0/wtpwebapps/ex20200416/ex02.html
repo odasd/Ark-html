@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>으으어어어</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+</head>
+<body>
+	<h1>[상품등록2]</h1>
+	<div id="content">
+	상품명 : <input type="text" id="pname">
+	<hr>
+	가격 : <input type="text" id="price">
+	<hr>
+	<input type="button" value="저장" id="btnsave">
+	<hr>
+	<input type="button" value="선택삭제" id="delall">
+	<table id="tbl" border=1 width=500>
+		<tr>
+			<td width=50><input type="checkbox" id="chkall"></td>
+			<td width=80>상품번호</td>
+			<td width=250>상품명</td>
+			<td width=80>상품가격</td>
+			<td width=50>삭제</td>
+		</tr>
+		<tr class="row">
+			<td><input type="checkbox" class="chk"></td>
+			<td class="pno">100</td>
+			<td class="pname">세탁기</td>
+			<td class="price">100</td>
+			<td><button class="del">삭제</button></td>
+		</tr>
+		<tr class="row">
+			<td><input type="checkbox" class="chk"></td>
+			<td class="pno">101</td>
+			<td class="pname">냉장고</td>
+			<td class="price">120</td>
+			<td><button class="del">삭제</button></td>
+		</tr>
+	</table>
+	</div>
+</body>
+<script>
+	pno=102;
+	
+	$("#btnsave").click(function(){
+	if(confirm("저장하시겠습니까?")==false) return; //저장하지 않을거면 빠져나가라
+	
+	pno=pno+1;
+	
+	var pname=$("#pname").val();
+	var price=$("#price").val();
+	var str="<tr class='row'>";
+	str = str + "<td><input type='checkbox' class='chk'></td>"; //str +=는 str에  넣고 더한다
+	str +="<td>" + pno + "</td>";
+	str +="<td>" + pname + "</td>";
+	str +="<td>" + price + "</td>";
+	str +="<td><button class=del>삭제</button></td>";
+	str +="</tr>";
+	$("#tbl").append(str);
+	});
+	
+	$("#chkall").on("click" , function(){
+		if($(this).is(":checked")) {
+			$("#tbl .row .chk").each(function(){
+				$(this).prop("checked", true);
+			
+		});
+		} else {
+			$("#tbl .row .chk").each(function(){
+				$(this).prop("checked", false);
+			});
+		}	
+	});	
+	$("#delall").on("click" , function(){
+		if(confirm("선택한 행을 삭제하시겠습니까?")==false) return;
+		$("#tbl .row input:checkbox:checked").each(function(){
+			var row=$(this).parent().parent(); //this는 버튼?
+			$(row).remove();
+	});
+	$("#tbl").on("click" , ".row .del", function(){
+		var row=$(this).parent().parent();
+		var pno=row.find(".pno").html();
+		if(confirm(pno + "을(를) 삭제?")==false) return;
+		$(row).remove();
+	});
+</script>
+</html>

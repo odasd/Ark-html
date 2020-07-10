@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="cafe.* , java.util.* , java.sql.*"%>
+
+<%
+
+	String strbno=request.getParameter("bno");
+	String title=request.getParameter("title");
+	String content=request.getParameter("content");
+	int bno=Integer.parseInt(strbno);
+
+	BlogVO vo=new BlogVO();
+	vo.setTitle(title);
+	vo.setContent(content);
+	
+	
+	
+	BlogDAO dao= new BlogDAO();
+	dao.update(vo);
+
+%>
+
+
+<script>
+	alert("수정되었습니다.");
+	
+	<%
+	out.println("<td><location.href=read.jsp?bno=" + bno + "'>");
+	%>
+</script>

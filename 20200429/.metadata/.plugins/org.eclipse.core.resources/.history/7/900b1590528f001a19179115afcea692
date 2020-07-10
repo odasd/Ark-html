@@ -1,0 +1,36 @@
+package ex202005062;
+
+public class CVO2 {
+ 
+	private String scode;
+	private String sname;
+	private String sdept;
+	private String pname;
+	
+	public String getScode() {
+		return scode;
+	}
+	public void setScode(String scode) {
+		this.scode = scode;
+	}
+	public String getSname() {
+		return sname;
+	}
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+	public String getSdept() {
+		return sdept;
+	}
+	public void setSdept(String sdept) {
+		this.sdept = sdept;
+	}
+	public String getPname() {
+		return pname;
+	}
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
+	
+	
+}

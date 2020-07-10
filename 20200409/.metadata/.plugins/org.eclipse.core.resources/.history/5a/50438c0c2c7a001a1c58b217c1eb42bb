@@ -1,0 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<% 	String title=request.getParameter("title");
+	String article=request.getParameter("article");
+	
+	out.println(title);
+	out.println(article);
+ %>
+
+
+

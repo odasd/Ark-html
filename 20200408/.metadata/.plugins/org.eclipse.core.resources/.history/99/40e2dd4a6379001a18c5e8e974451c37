@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>콩순이의 쇼핑몰</title>
+	<style>
+		body {background:gray;}
+		#page {background:white; width:1000px; margin:auto; padding:20px; box-shadow:20px 20px 20px black;}
+		h1, h3 {text-align:center;}
+		h1 {background:black; color:pink;}
+		#nav span {background:gray; color:white; margin:10px; padding:5px; font-size:20px; text-align:center;}
+		#nav span:hover {background:black; color:pink;}
+		#nav {text-align:center;}
+		.group {background:pink; width:800px; height:180px; padding:10px; margin:10px auto; border:10px solid black; border-radius:10px;}
+		.box {float:left; width:180px; height:150; text-align:center; margin:5px; padding:5px; background:orange;}
+		.box:hovor {box-shadow:20px 20px 20px black; color:blue;}
+		.box:active {box-shadow:20px 20px 20px black;}
+		.tittle {background:white;}
+	</style>
+</head>
+<body>
+	<div id="page">
+		<div id="top">
+			<h1>콩순이 쇼핑몰</h1>
+			<hr>
+		</div>
+		<div id="nav">
+			<span>침대</span>
+			<span>쇼파</span>
+			<span>책상</span>
+			<span>식탁</span>
+			<hr>
+		</div>
+		<div id="content">
+			<div class="group">
+				<div class="box">
+					<img src="http://placehold.it/100x100">
+					<div class="tittle">책상1</div>
+					<div class="tittle">100,000원</div>
+				</div>
+				<div class="box">
+					<img src="http://placehold.it/100x100">
+					<div class="tittle">책상2</div>
+					<div class="tittle">120,000원</div>
+				</div>
+				<div class="box">
+					<img src="http://placehold.it/100x100">
+					<div class="tittle">책상3</div>
+					<div class="tittle">140,000원</div>
+				</div>
+				<div class="box">
+					<img src="http://placehold.it/100x100">
+					<div class="tittle">책상4</div>
+					<div class="tittle">200,000원</div>
+				</div>
+			</div>
+			<div class="group">
+				<div class="box">
+					<img src="http://placehold.it/100x100">
+					<div class="tittle">쇼파1</div>
+					<div class="tittle">100,000원</div>
+				</div>
+				<div class="box">
+					<img src="http://placehold.it/100x100">
+					<div class="tittle">쇼파2</div>
+					<div class="tittle">120,000원</div>
+				</div>
+				<div class="box">
+					<img src="http://placehold.it/100x100">
+					<div class="tittle">쇼파3</div>
+					<div class="tittle">140,000원</div>
+				</div>
+				<div class="box">
+					<img src="http://placehold.it/100x100">
+					<div class="tittle">쇼파4</div>
+					<div class="tittle">200,000원</div>
+				</div>	
+			</div>
+			<div class="group">
+				<div class="box">
+					<img src="http://placehold.it/100x100">
+					<div class="tittle">침대1</div>
+					<div class="tittle">100,000원</div>
+				</div>
+				<div class="box">
+					<img src="http://placehold.it/100x100">
+					<div class="tittle">침대2</div>
+					<div class="tittle">120,000원</div>
+				</div>
+				<div class="box">
+					<img src="http://placehold.it/100x100">
+					<div class="tittle">침대3</div>
+					<div class="tittle">140,000원</div>
+				</div>
+				<div class="box">
+					<img src="http://placehold.it/100x100">
+					<div class="tittle">침대4</div>
+					<div class="tittle">200,000원</div>
+				</div>	
+			</div>
+			<div class="group">
+				<div class="box">
+					<img src="http://placehold.it/100x100">
+					<div class="tittle">식탁1</div>
+					<div class="tittle">100,000원</div>
+				</div>
+				<div class="box">
+					<img src="http://placehold.it/100x100">
+					<div class="tittle">식탁2</div>
+					<div class="tittle">120,000원</div>
+				</div>
+				<div class="box">
+					<img src="http://placehold.it/100x100">
+					<div class="tittle">식탁3</div>
+					<div class="tittle">140,000원</div>
+				</div>
+				<div class="box">
+					<img src="http://placehold.it/100x100">
+					<div class="tittle">식탁4</div>
+					<div class="tittle">200,000원</div>
+				</div>	
+			</div>
+		</div>
+		<div id="bottom">
+			<hr>
+			<h3>주소 : 인천 미추홀구 학익동</h3>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>값을 넣어라~</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+</head>
+<body>
+	<h1>[상품등록]</h1>
+	<form action="sqlinsert.jsp">
+		상품명 : <input type="text" name="pname">
+		<hr>
+		가격 : <input type="text" name="price">
+		<hr>
+		<input type="submit" value="저장">
+		<input type="reset" value="취소">
+		<input type="button" value="목록">
+	</form>
+</body>
+<script>
+	$(frm).submit(function(event){
+		event.preventDefault(); //이벤트 동작을 막아주는 거임
+		if(confirm("등록하시겠습니까?")==false) return;
+		
+		var pname=$(frm.pname).val();
+		var price=$(frm.price).val();
+		
+		if(pname.replace(/[가-힣]/g, "")) || pname=="") {
+			alert("한글만 입력하시오")
+			$(frm.pname).val("");
+			$(frm.pname).focus();
+		} else if (price.replace(/[0-9]/g, "")) || price==""){
+			alert("숫자만 입력하세요")
+			$(frm.price).val("");
+			$(frm.price).focus();
+		} else {
+			frm.submit.it();
+		}
+		
+		//소문자가 아닌 글자가 있는지
+		/*
+		if(pname.replace(/a-z]/g, '') || pname=="") {
+			alert("소문자만 입력하시오")
+			$(frm.pname).val("");
+			$(frm.pname).focus();
+		
+		//대문자가 아닌 글자가 있는지
+		if(pname.replace(/A-Z]/g, '') || pname=="") {
+			alert("대문자만 입력하시오")
+			$(frm.pname).val("");
+			$(frm.pname).focus();
+			
+	//소문자나 대문자가 아닌 글자가 있는지
+		if(pname.replace(/a-z]/gi, '') || pname=="") {
+			alert("만 입력하시오")
+			$(frm.pname).val("");
+			$(frm.pname).focus();
+			*/
+	});
+</script>
+</html>

@@ -1,0 +1,16 @@
+package ex01;
+
+public class Test {
+
+	public static void main(String[] args) {
+		//목록출력
+		ProductDAO dao=new ProductDAO();
+		ArrayList<ProductVO> list=dao.list();
+		
+		for(int i=0; i<list.size(); i++) {
+			ProductVO vo=list.get(i);
+			System.out.println(vo.getPno() + vo.getPname() + vo.getPrice());
+		}
+	}
+
+}

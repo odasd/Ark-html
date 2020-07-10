@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	* {color:red;} /* 전체 선택자 */
+	
+	/* 태그 선택자 */
+	h1 {color:blue;}
+	p {color:yellow; background:black;}
+	
+	/* id선택자 */
+	#header{width:800px; height:50px; background:gray;}
+</style>
+</head>
+<body>
+	<!-- 태그 주석 -->
+	<h1>전체 선택자 적용하기</h1>
+	<p>전체 선택자를 사용하는 모든.....</p>
+	
+	<div id="header"><h1>여기는 제목입니다</h1></div>
+	<div id="wrap">
+		<div id="aside"><h1>여기는 aside..</h1></div>
+		<div id="content"><h1>여기는 content...</h1></div>
+	</div>
+</body>
+</html>

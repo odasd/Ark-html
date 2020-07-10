@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="cafe.* , java.util.*, java.sql.*" %>
+
+<%
+	
+	String Title=request.getParameter("title");
+	String Content=request.getParameter("content");
+	
+	out.println(title);
+	out.println(content);
+	
+	BlogVO vo=new BlogVO();
+	vo.setTitle(title);
+	vo.setArticle(content);
+	
+	BlogDAO dao=new BlogDAO();
+	dao.insert(vo);
+	
+	out.println("저장되었습니다.");
+
+
+
+
+%>
+

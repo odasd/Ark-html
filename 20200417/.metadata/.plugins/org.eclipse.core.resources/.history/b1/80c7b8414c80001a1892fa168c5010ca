@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		h1,h3 {text-align:center;}
+		#content {width:1000px; background:#9aa6a2; color:white; margin:auto; padding:10px;}
+		#tbl {margin:auto;}
+		td{text-align:center;}
+		.kor, .eng, .mat {text-align:right;}
+		.row {color:black;}
+		body {background:#fffff3;}
+	</style>
+</head>
+<body>
+	<h1>[성적처리]</h1>
+	<div id="content">
+		이름 : <input type="text" id="txtname">
+		<hr>
+		국어 : <input type="text" id="txtkor">
+		<hr>
+		영어 : <input type="text" id="txteng">
+		<hr>
+		수학 : <input type="text" id="txtmat">
+		<hr>
+		<input type="button" value="등록" id="btninsert">
+		<h3>[성적목록]</h3>
+		<table border=1 width=500 id="tbl">
+			<tr class="title">
+				<th>NO.</th>
+				<th>name</th>
+				<th>국어점수</th>
+				<th>영어점수</th>
+				<th>수학점수</th>
+				<th>수정</th>
+				<th>삭제</th>
+			</tr>
+			<tr class="row">
+				<td>01</td>
+				<td>김개똥</td>
+				<td><input class="kor" type="text" size=4 value=90></td>
+				<td><input class="eng" type="text" size=4 value=75></td>
+				<td><input class="mat" type="text" size=4 value=64></td>
+				<td><button class="update">수정</button></td>
+				<td><button class="delete">삭제</button></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>연습01</title>
+	<style>
+		* {font-family:'배달의민족 주아';} /* 전체 글꼴 스타일을 조절할수 있음 */
+		body {background:#595151;}
+		#page {background:#f3f2c9; width:1000px; margin:auto; box-shadow:10px 10px 10px #f96464; padding:30px; border-radius:10px;}
+		#header h1 {text-align:center;font-size:50px;}
+		#footer h3 {text-align:center; font-style:italic;}
+		.box {border:5px double black; border-radius:10px; padding:10px; margin-bottom:10px; width:850px;}
+		.title {line-height:10px;}
+		#menu {width:100px; float:right;}
+		a {text-decoration:none; line-height:40px; font-size:20px; font-weight:bold; border:5px soild black;}
+		a:hover {background:#f56997; color:black; border-radius:5px; }
+		.item:hover {background:#faa9c3; color:black; border-radius:5px; text-align:center; border:5px double black; border-radius:5px;}
+		.item {border:2px solid black; border-radius:5px; text-align:center; background:white; margin:15px; width:100px; height:30px;}
+	</style>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<h1>콩순이 컴퓨터 블로그</h1>
+			<hr>
+		</div>
+		<div id="content">
+			<div id="menu">
+				<div class="item"><a href="#">글쓰기</a></div>
+				<div class="item"><a href="#">관리</a></div>
+				<div class="item"><a href="#">통계</a></div>
+			</div>
+			<div class="box">
+				<h1 class="title">HTML5 개요와 활용</h1>
+				<h3 class="date">2013년 02월 14일</h3>
+				<img src="http://placehold.it/240x160">
+				<p class="article">
+					What is Lorem Ipsum?<br>
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+					when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+					It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+					It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+					and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				</p>
+			</div>
+			<div class="box">
+				<h1 class="title">HTML5 개요와 활용</h1>
+				<h3 class="date">2013년 02월 14일</h3>
+				<img src="http://placehold.it/240x160">
+				<p class="article">
+					What is Lorem Ipsum?<br>
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+					when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+					It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+					It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+					and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				</p>
+			</div>
+		</div> <!-- 페이지 닫는거 -->
+		<div id="footer">
+			<hr>
+			<h3>작성자 : 매력적인 콩순이</h3>
+		</div>
+	</div>
+</body>
+</html>

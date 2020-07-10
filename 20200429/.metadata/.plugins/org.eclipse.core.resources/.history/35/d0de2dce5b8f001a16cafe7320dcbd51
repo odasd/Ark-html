@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="ex20200506.*, java.util.* , java.text.*"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>점수 총계</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+	<style>
+		#page {margin:auto; float:center; text-align:center;}
+		#tbl,#ctbl {margin:auto; float:center; text-align:center;}
+		th {background:gray; color:pink;}
+		.row:hover{background:skyblue; color:white;}
+	</style>
+</head>
+<body>
+	<div id=page width=1000>
+	<h1>[강좌별 평균점수]</h1>
+	<table border=1 width=700 id=tbl>
+		<tr>
+			<th>학생번호</th>
+			<th>학생이름</th>
+			<th>학생학과</th>
+		</tr>
+		<%
+			SDAO dao=new SDAO();
+			ArrayList<SVO> list=dao.list();
+			for(SVO vo:list) {
+				out.println("<tr class=row>");
+				out.println("<td>" + vo.getScode() + "</td>");
+				out.println("<td>" + vo.getSname() + "</td>");
+				out.println("<td>" + vo.getSdept() + "</td>");
+				out.println("</tr>");
+			}
+		%>
+	</table>
+	</div>
+</body>
+<script>
+
+</script>
+</html>

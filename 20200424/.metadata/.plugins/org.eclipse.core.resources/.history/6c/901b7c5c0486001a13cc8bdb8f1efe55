@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>검색엔진ㅋㅋ</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+	<h1>검색엔진</h1>
+	<input type="text" id="txtsearch">
+	<input type="button" id="btnsearch" value="검색">
+	네이버<input type="radio" name="sp" value="네이버">
+	다음<input type="radio" name="sp" value="다음">
+	<div>
+		<table>
+			<tr>
+				
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

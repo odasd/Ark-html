@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>카카오 웹 검색</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+</head>
+<body>
+	<h1>[카카오 웹 검색]</h1>
+	<div id="search">
+		<input type="text" value="이효리" id="txtsearch">
+		<input type="button" value="검색" id="btnsearch">
+	</div>
+	<table id="tbl" width=700 border=1></table>
+</body>
+<script>
+	$.ajax({
+		type:"get",
+		url:"https://dapi.kakao.com/v2/search/web",
+		headers: {"Authorization":"KakaoAK 2d06e7f6c04a5b6cff4d94cebfef1694"},
+		dataType:"json",
+		data:{"query" : "이효리", "page":1, "size":10},//검색페이지
+		success:function(data){
+			var str="";
+			$(data.documents).each(function(){
+				var title=this.title;
+				var str="<tr>";
+				str += "<td>" + title + "</td>";
+				str +="</tr>";
+			});
+			$("#tbl").html(str);
+		}
+	});
+</script>
+</html>

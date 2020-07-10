@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>연습05</title>
+	
+</head>
+<body>
+	<h1>이미지 연습</h1>
+		<table border=1 width=500>
+			<tr>
+				<td><a href="http://daum.net"><img src="daum.png" width=100/></a></td>
+				<td>다음페이지로 이동합니다.</td>
+			</tr>
+			<tr>
+				<td><a href="http://naver.com"><img src="naver.png" width=200/></a></td>
+				<td>다음페이지로 이동합니다.</td>
+			</tr>
+		</table>
+		<br> <!-- 한칸 띄우기 -->
+		<img src="http://placehold.it/100x100"/> <!-- 설정한 이미지 크기를 출력해서 보여줌 -->
+		<div style="background:black;color:white;">블럭 영역 설정</div>
+</body>
+</html>
